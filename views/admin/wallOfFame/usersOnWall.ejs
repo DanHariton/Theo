@@ -1,0 +1,52 @@
+<% include ../adminHead.ejs %>
+<% include ../adminNav.ejs %>
+<div id="content-admin-panel">
+    <% include ../adminMenu.ejs %>
+    <div class="wall-of-fame">
+        <h2>
+            Add users to Wall Of Fame
+        </h2>
+        <div class="tier1-users-wall">
+            <h4>Users on Wall</h4>
+            <form action="/admin/wall-of-fame/change-user" method="GET">
+                <div class="form-group hide">
+                    <input type="text" name="userType" class="form-control" value="<%= customers[0].userType%>">
+                </div>
+                <table class="table table-customers">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Town</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">Change?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (var i = 0; i < customers.length; i++) { %>
+                        <tr>
+                            <th scope="row"><%= customers[i].id%></th>
+                            <td><%= customers[i].name%></td>
+                            <td><%= customers[i].town%></td>
+                            <td><%= customers[i].comment%></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="userId" value="<%= customers[i].id%>" <% if (i === 0) { %> checked <% } %>>
+                                </div>
+                            </td>
+                            <td class="hide">
+                                <div class="form-group">
+                                    <input type="text" name="userType" class="form-control" value="<%= customers[i].userType%>">
+                                </div>
+                            </td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+                <button type="submit" class="button-submit-user form-submit">Choose</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../adminPanelFooter.ejs %>

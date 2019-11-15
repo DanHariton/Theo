@@ -1,0 +1,15 @@
+<% include adminHead.ejs %>
+<% include adminNav.ejs %>
+<div id="content-admin-panel">
+    <% include adminMenu.ejs %>
+    <div class="admin-newsletters">
+        <h2>
+            Send some email our customers!
+        </h2>
+        <form method="post">
+            <textarea id="mytextarea" name="mytextarea">Hello, World!</textarea>
+        </form>
+    </div>
+</div>
+
+<% include adminPanelFooter.ejs %>

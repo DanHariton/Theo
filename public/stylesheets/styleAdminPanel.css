@@ -1,0 +1,214 @@
+html {
+    margin: 0px;
+    min-height: 100%;
+}
+
+.logo-admin {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.admin-button {
+    padding: 10px 20px !important;
+    background-color: #8C171F !important;
+    border-color: #8C171F !important;
+}
+
+.admin-button:hover {
+    background-color: white !important;
+    color: #8C171F !important;
+
+}
+
+.login label, .login-form h4 {
+    color: white;
+}
+
+.form-control {
+    border: 1px solid rgba(140, 23, 31, 0.2) !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 .2rem rgba(140, 23, 31, .25) !important;
+    border-color: rgba(140, 23, 31, .5) !important;
+}
+
+.login-container {
+    height: 100vh;
+    background-image: url('../images/theoadmin.jpg');
+}
+
+.menu-item {
+    padding: 10% 10% 5% 10% !important;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+.menu-item:hover {
+    color: rgba(246, 14, 28, .7);
+    border-bottom: 1px solid rgba(246, 14, 28, .7);
+    font-weight: bold;
+}
+
+.admin-logo img {
+    width: 100px;
+}
+
+.login-container .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.login-form button {
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+}
+
+.login-form {
+    width: 50%;
+    margin: auto;
+}
+
+#content-admin-panel {
+    display: flex;
+}
+
+#admin-menu {
+    width: 15%;
+    height: 92vh;
+    background-color: rgba(61, 63, 84, .8);
+}
+
+.drop-user-menu {
+    margin-right: 20px;
+}
+
+#admin-top-menu-user-section {
+    justify-content: flex-end;
+}
+
+.dropdown-menu {
+    left: -80% !important;
+}
+
+.admin-nav {
+    padding: 0 !important;
+}
+
+.admin-logo {
+    width: 15%;
+    text-align: center;
+    color: #F0EEF9;
+    background-color: #3D3F54;
+    padding: 15px 15px;
+}
+
+.admin-start-screen, .admin-customers, .web-statistics, .admin-newsletters, .wall-of-fame {
+    width: 85%;
+}
+
+.admin-start-screen h1, .admin-customers h2, .web-statistics h2, .admin-newsletters h2, .wall-of-fame h2 {
+    margin-left: 3%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.logout-button {
+    color: #8C171F;
+    margin-right: 3%;
+}
+
+.logout-button:hover {
+    color: rgba(246, 14, 28, 1);
+}
+
+.admin-newsletters form {
+    width: 95%;
+    margin-left: 3%;
+}
+
+.admin-newsletters form .tox-tinymce {
+    min-height: 500px;
+}
+
+.table-customers {
+    width: 95% !important;
+    margin: auto;
+}
+
+.invisibility {
+    display: none;
+}
+
+.active {
+    color: rgba(246, 14, 28, .7) !important;
+    border-bottom: 1px solid rgba(246, 14, 28, .7);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.customer-element, .wall-element {
+    margin-bottom: 0;
+}
+
+.active-menu-link {
+    padding-left: 20% !important;
+    padding-top: 5% !important;
+}
+
+.wall-of-fame .table {
+    margin-left: 3%;
+}
+
+.wall-of-fame .button-submit-user {
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+
+.wall-of-fame h4 {
+    margin-left: 3%;
+    margin-bottom: 1%;
+}
+
+.form-detail-user {
+    width: 90%;
+    margin-left: 3%;
+}
+
+.form-submit {
+    padding: 10px 40px;
+    background-color: #8C171F;
+    border: 1px solid #8C171F;
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: 500;
+    float: left;
+    display: block;
+    position: relative;
+    left: 42%;
+    top: 5%;
+}
+
+.form-submit:hover {
+    color: #8C171F;
+    background-color: #ffffff;
+}
+
+.hide {
+    display: none;
+}
+
+.end-users-wall {
+    margin-top: 8%;
+    padding-top: 2%;
+    border-top: 1px solid #8C171F;
+}
+
+.user-not-found-db {
+    margin-left: 3%;
+    color: red;
+}

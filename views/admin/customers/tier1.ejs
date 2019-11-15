@@ -1,0 +1,38 @@
+<% include ../adminHead.ejs %>
+<% include ../adminNav.ejs %>
+<div id="content-admin-panel">
+    <% include ../adminMenu.ejs %>
+    <div class="admin-customers">
+        <h2>
+            Tier 1 Customers
+        </h2>
+        <table class="table table-customers">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Town</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Comment</th>
+                <th scope="col">Mailing?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (var i = 0; i < customers.length; i++) { %>
+                <tr>
+                    <th scope="row"><%= customers[i].id%></th>
+                    <td><%= customers[i].name%></td>
+                    <td><%= customers[i].email%></td>
+                    <td><%= customers[i].town%></td>
+                    <td><%= customers[i].mobile%></td>
+                    <td><%= customers[i].comment%></td>
+                    <td><%= customers[i].sending_email === 0 ? 'No' : 'Yes' %></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<% include ../adminPanelFooter.ejs %>

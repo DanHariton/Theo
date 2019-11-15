@@ -1,0 +1,39 @@
+<% include ../adminHead.ejs %>
+<% include ../adminNav.ejs %>
+
+<div id="content-admin-panel">
+    <% include ../adminMenu.ejs %>
+    <div class="wall-of-fame">
+        <h2>
+            Add users to Wall Of Fame
+        </h2>
+        <% if (userInfo === 'userNotFound') { %>
+            <h1 class="user-not-found-db">User not found in DATABASE. Contact web administration!</h1>
+        <% } else { %>
+            <h4>Edit information about select User, before adding him to Wall</h4>
+            <form class="form-detail-user" action="/admin/wall-of-fame/addUserToWall" method="GET">
+                <div class="form-group hide">
+                    <input type="text" name="userId" class="form-control" value="<%= userInfo.id%>">
+                </div>
+                <div class="form-group hide">
+                    <input type="text" name="userType" class="form-control" value="<%= userInfo.userType%>">
+                </div>
+                <div class="form-group">
+                    <label for="userName">User Name</label>
+                    <input type="text" name="userName" class="form-control" id="userName" value="<%= userInfo.name%>">
+                </div>
+                <div class="form-group">
+                    <label for="userTown">User Town</label>
+                    <input type="text" name="userTown" class="form-control" id="userTown" value="<%= userInfo.town%>">
+                </div>
+                <div class="form-group">
+                    <label for="userComment">User Comment</label>
+                    <textarea class="form-control" name="userComment" id="userComment" rows="3"><%= userInfo.comment%></textarea>
+                </div>
+                <button type="submit" class="form-submit">Save</button>
+            </form>
+        <% } %>
+    </div>
+</div>
+
+<% include ../adminPanelFooter.ejs %>

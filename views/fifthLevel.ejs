@@ -1,0 +1,126 @@
+<div id="level-5">
+    <div class="container">
+        <h2>Po<strong class="color-letter">d</strong>me i v Česku<br> udělat něco výjimečného</h2>
+        <div class="content-block-crowdfunding">
+            <div class="table-1">
+                <p><strong>Gen.partner</strong></p>
+                <ul>
+                    <li>Nejvýhodnější cenová nabídka</li>
+                    <li>Brandovana serie příchutí</li>
+                    <li>Promotion/marketing</li>
+                    <li>Wall of Fame</li>
+                </ul>
+            </div>
+            <div class="table-2">
+                <p><strong>Tier1 (podniky,obchody)</strong></p>
+                <ul>
+                    <li>Být současti vyvoje produktů</li>
+                    <li>Skvělé ceny (10% discount)</li>
+                    <li>Marketingová podpora</li>
+                    <li>Wall of fame</li>
+                    <li>Tastingy</li>
+                </ul>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user-data-form-tier-1">
+                    Mám zájem
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="user-data-form-tier-1" tabindex="-1" role="dialog" aria-labelledby="user-data-form" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="formTitle">Tier 1 Form</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/form-sending-t1" method="post">
+                                    <div class="form-group">
+                                        <label for="user-name">Jméno příjmení</label>
+                                        <input class="form-control" type="text" name="user_name" placeholder="Jméno příjmení">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-email">Email</label>
+                                        <input type="email" class="form-control" id="user-email" name="user_email" aria-describedby="emailHelp" placeholder="Vaš email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-town">Odkud jste</label>
+                                        <input type="text" class="form-control" id="user-town" name="user_town" placeholder="Vaše město">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-phone">Telefonní číslo</label>
+                                        <input type="text" class="form-control" id="user-phone" name="user_phone" placeholder="Telefonní číslo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-phone">Pár slov o Vás</label>
+                                        <textarea class="form-control" id="user-comment" name="user_comment" placeholder="O Vás" rows="4"></textarea>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" name="sending_email" class="form-check-input" id="newsletters-checkbox">
+                                        <label class="form-check-label" for="newsletters-checkbox">Souhlasím s zasíláním zpráv o novinkach</label>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary close-button" data-dismiss="modal">Zavřít</button>
+                                    <button type="submit" class="btn btn-primary">Odeslat</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-3">
+                <p><strong>End User</strong></p>
+                <ul>
+                    <li>Guest list na "theo" ackсích</li>
+                    <li>5% sleva na tabák</li>
+                    <li>Wall of fame</li>
+                </ul>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user-data-form-end-user">
+                    Mám zájem
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="user-data-form-end-user" tabindex="-1" role="dialog" aria-labelledby="user-data-form" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="formTitle">End User Form</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/form-sending-end-user" method="post">
+                                    <div class="form-group">
+                                        <label for="user-name">Jméno příjmení</label>
+                                        <input class="form-control" type="text" name="user_name" placeholder="Jméno příjmení">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-email">Email</label>
+                                        <input type="email" class="form-control" id="user-email" name="user_email" aria-describedby="emailHelp" placeholder="Vaš email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-town">Odkud jste</label>
+                                        <input type="text" class="form-control" id="user-town" name="user_town" placeholder="Vaše město">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-phone">Telefonní číslo</label>
+                                        <input type="text" class="form-control" id="user-phone" name="user_phone" placeholder="Telefonní číslo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-phone">Pár slov o Vás</label>
+                                        <textarea class="form-control" id="user-comment" name="user_comment" placeholder="O Vás" rows="4"></textarea>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" name="sending_email" class="form-check-input" id="newsletters-checkbox">
+                                        <label class="form-check-label" for="newsletters-checkbox">Souhlasím s zasíláním zpráv o novinkach</label>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary close-button" data-dismiss="modal">Zavřít</button>
+                                    <button type="submit" class="btn btn-primary">Odeslat</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

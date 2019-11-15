@@ -1,0 +1,82 @@
+<% include ../adminHead.ejs %>
+<% include ../adminNav.ejs %>
+<div id="content-admin-panel">
+    <% include ../adminMenu.ejs %>
+    <div class="wall-of-fame">
+        <h2>
+            Add users to Wall Of Fame
+        </h2>
+        <div class="tier1-users-wall">
+            <h4>T1 Users</h4>
+            <form action="/admin/wall-of-fame/change-user" method="GET">
+                <div class="form-group hide">
+                    <input type="text" name="userType" class="form-control" value="<%= customersT[0].userType%>">
+                </div>
+                <table class="table table-customers">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Town</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (var i = 0; i < customersT.length; i++) { %>
+                        <tr>
+                            <th scope="row"><%= customersT[i].id%></th>
+                            <td><%= customersT[i].name%></td>
+                            <td><%= customersT[i].town%></td>
+                            <td><%= customersT[i].comment%></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="userId" value="<%= customersT[i].id%>" <% if (i === 0) { %> checked <% } %>>
+                                </div>
+                            </td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+                <button type="submit" class="button-submit-user form-submit">Choose</button>
+            </form>
+        </div>
+        <div class="end-users-wall">
+            <h4>End Users</h4>
+            <form action="/admin/wall-of-fame/change-user" method="GET">
+                <div class="form-group hide">
+                    <input type="text" name="userType" class="form-control" value="<%= customersEndUsr[0].userType%>">
+                </div>
+                <table class="table table-customers">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Town</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (var n = 0; n < customersEndUsr.length; n++) { %>
+                        <tr>
+                            <th scope="row"><%= customersEndUsr[n].id%></th>
+                            <td><%= customersEndUsr[n].name%></td>
+                            <td><%= customersEndUsr[n].town%></td>
+                            <td><%= customersEndUsr[n].comment%></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="userId" value="<%= customersEndUsr[n].id%>" <% if (i === 0) { %> checked <% } %>>
+                                </div>
+                            </td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+                <button type="submit" class="button-submit-user form-submit">Choose</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../adminPanelFooter.ejs %>
